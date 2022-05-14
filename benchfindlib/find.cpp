@@ -1,6 +1,6 @@
 #include "find.h"
 #include <functional>
-
+#include <algorithm>
  bool IsPresent(std::string_view pattern, std::string_view str) {
   // only default_searcher is constexpr in cpp20
   auto it = std::search(str.begin(), str.end(),
