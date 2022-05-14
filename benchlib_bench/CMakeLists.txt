@@ -1,0 +1,7 @@
+project(findlibbench_bench)
+
+add_subdirectory(lib)
+
+add_executable(findlibbench_bench_run findlibbench.cpp)
+target_link_libraries(findlibbench_bench_run findliblib_lib)
+target_link_libraries(findlibbench_bench_run benchmark::benchmark)

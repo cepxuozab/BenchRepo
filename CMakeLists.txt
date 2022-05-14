@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.21)
+project(BenchFind)
+
+set(CMAKE_CXX_STANDARD 20)
+set(SOURCE_FILES main.cpp)
+add_executable(BenchFind_run ${SOURCE_FILES})
+set (BENCHMARK_ENABLE_TESTING OFF)
+include_directories(benchfindlib)
+add_subdirectory(benchfindlib)
+add_subdirectory(benchlib_bench)
+target_link_libraries(BenchFind_run findliblib_lib)
